@@ -34,6 +34,7 @@ To migrate from the official OpenAI model to the Azure OpenAI model, you can jus
    this.openAiApi = new OpenAIApi(
       new Configuration({
          apiKey: this.apiKey,
+         // add azure info into configuration
          azure: {
             apiKey: {your-azure-openai-resource-key},
             endpoint: {your-azure-openai-resource-endpoint},
