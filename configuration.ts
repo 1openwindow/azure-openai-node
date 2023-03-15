@@ -18,7 +18,7 @@ const packageJson = require("../package.json");
 export interface AzureConfigurationParameters {
     apiKey?: string | Promise<string> | ((name: string) => string) | ((name: string) => Promise<string>);
     endpoint?: string;
-    deploymendName?: string;
+    deploymentName?: string;
 }
 
 export interface ConfigurationParameters {
@@ -121,7 +121,7 @@ export class Configuration {
             this.formDataCtor = require("form-data");
         }
         if (this.azure) {
-            if (!this.azure.apiKey || !this.azure.endpoint || !this.azure.deploymendName) {
+            if (!this.azure.apiKey || !this.azure.endpoint || !this.azure.deploymentName) {
                 throw new Error("Azure Configuration requires apiKey, endpoint and deploymendName");
             }
             this.apiKey = this.azure.apiKey;
