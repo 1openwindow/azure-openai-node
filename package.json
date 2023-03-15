@@ -1,6 +1,6 @@
 {
   "name": "azure-openai",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "Node.js library for the Azure OpenAI API",
   "repository": {
     "type": "git",
