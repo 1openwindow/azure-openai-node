@@ -1945,12 +1945,13 @@ export const OpenAIApiAxiosParamCreator = function (configuration?: Configuratio
             // verify required parameter 'createChatCompletionRequest' is not null or undefined
             assertParamExists('createChatCompletion', 'createChatCompletionRequest', createChatCompletionRequest)
 
-            let deploymentNmae = createChatCompletionRequest.model;
-            const localVarPath = `/openai/deployments/${deploymentNmae}/completions?api-version=2022-12-01`;
-
-            createChatCompletionRequest.prompt = createChatCompletionRequest.prompt ? createChatCompletionRequest.prompt : messageToAzurePrompt(createChatCompletionRequest.messages);
-            createChatCompletionRequest.messages = undefined;
-            createChatCompletionRequest.stop = createChatCompletionRequest.stop ? createChatCompletionRequest.stop : ["<|im_end|>"];
+            let localVarPath = `/chat/completions`;
+            if (configuration.azure) {
+                localVarPath = `/openai/deployments/${configuration.azure.deploymendName}/completions?api-version=2022-12-01`;
+                createChatCompletionRequest.prompt = createChatCompletionRequest.prompt ? createChatCompletionRequest.prompt : messageToAzurePrompt(createChatCompletionRequest.messages);
+                createChatCompletionRequest.messages = undefined;
+                createChatCompletionRequest.stop = createChatCompletionRequest.stop ? createChatCompletionRequest.stop : ["<|im_end|>"];
+            }
 
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
