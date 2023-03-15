@@ -54,4 +54,12 @@ To migrate from the official OpenAI model to the Azure OpenAI model, you can jus
     ```
 
 ## Test
-Currently, only "gpt-3.5-turbo" API has been tested. Please feel free to submit your issues or pull requests to support other APIs.
+| API | Test Status |
+| --- | --- |
+| createChatCompletion | Pass |
+| createCompletion | Pass |
+| createEmbedding | Pass |
+| createImage | Not Support |
+
+
+Please feel free to submit your issues or pull requests to support other APIs.
