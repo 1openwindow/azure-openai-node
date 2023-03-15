@@ -53,6 +53,9 @@ To migrate from the official OpenAI model to the Azure OpenAI model, you can jus
     const delta = parsed.choices[0].text;
     ```
 
+## Support
+support latest version of OpenAI API, v3.2.0.
+
 ## Test
 | API | Test Status |
 | --- | --- |
