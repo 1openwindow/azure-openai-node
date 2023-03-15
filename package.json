@@ -4,7 +4,7 @@
   "description": "Node.js library for the Azure OpenAI API",
   "repository": {
     "type": "git",
-    "url": "git@github.com:1openwindow/openai-node-for-azure"
+    "url": "git@github.com:1openwindow/azure-openai-node"
   },
   "keywords": [
     "azure-openai",
