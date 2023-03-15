@@ -1947,7 +1947,7 @@ export const OpenAIApiAxiosParamCreator = function (configuration?: Configuratio
 
             let localVarPath = `/chat/completions`;
             if (configuration.azure) {
-                localVarPath = `/openai/deployments/${configuration.azure.deploymendName}/completions?api-version=2022-12-01`;
+                localVarPath = `/openai/deployments/${configuration.azure.deploymentName}/completions?api-version=2022-12-01`;
                 createChatCompletionRequest.prompt = createChatCompletionRequest.prompt ? createChatCompletionRequest.prompt : messageToAzurePrompt(createChatCompletionRequest.messages);
                 createChatCompletionRequest.messages = undefined;
                 createChatCompletionRequest.stop = createChatCompletionRequest.stop ? createChatCompletionRequest.stop : ["<|im_end|>"];
@@ -2027,7 +2027,7 @@ export const OpenAIApiAxiosParamCreator = function (configuration?: Configuratio
             assertParamExists('createCompletion', 'createCompletionRequest', createCompletionRequest)
             let localVarPath = `/completions`;
             if (configuration.azure) {
-                localVarPath = `/openai/deployments/${configuration.azure.deploymendName}/completions?api-version=2022-12-01`;
+                localVarPath = `/openai/deployments/${configuration.azure.deploymentName}/completions?api-version=2022-12-01`;
             }
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -2102,7 +2102,7 @@ export const OpenAIApiAxiosParamCreator = function (configuration?: Configuratio
             assertParamExists('createEmbedding', 'createEmbeddingRequest', createEmbeddingRequest)
             let localVarPath = `/embeddings`;
             if (configuration.azure) {
-                localVarPath = `/openai/deployments/${configuration.azure.deploymendName}/embeddings?api-version=2022-12-01`;
+                localVarPath = `/openai/deployments/${configuration.azure.deploymentName}/embeddings?api-version=2022-12-01`;
             }
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);

@@ -122,7 +122,7 @@ export class Configuration {
         }
         if (this.azure) {
             if (!this.azure.apiKey || !this.azure.endpoint || !this.azure.deploymentName) {
-                throw new Error("Azure Configuration requires apiKey, endpoint and deploymendName");
+                throw new Error("Azure Configuration requires apiKey, endpoint and deploymentName");
             }
             this.apiKey = this.azure.apiKey;
             this.baseOptions.headers['api-key'] = this.azure.apiKey;

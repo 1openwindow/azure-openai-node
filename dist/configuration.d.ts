@@ -12,7 +12,7 @@
 export interface AzureConfigurationParameters {
     apiKey?: string | Promise<string> | ((name: string) => string) | ((name: string) => Promise<string>);
     endpoint?: string;
-    deploymendName?: string;
+    deploymentName?: string;
 }
 export interface ConfigurationParameters {
     apiKey?: string | Promise<string> | ((name: string) => string) | ((name: string) => Promise<string>);
