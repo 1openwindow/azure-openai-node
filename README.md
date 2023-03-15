@@ -45,5 +45,12 @@ To migrate from the official OpenAI model to the Azure OpenAI model, you can jus
 
 4. run your code. That's it.
 
+5. optional, if you use stream = true. you may need to change response
+    ```
+    // Azure OpenAI donot response delta data, so you need to change the response to text
+    // const delta = parsed.choices[0].delta.content;
+    const delta = parsed.choices[0].text;
+    ```
+
 ## Test
 Currently, only "gpt-3.5-turbo" API has been tested. Please feel free to submit your issues or pull requests to support other APIs.
