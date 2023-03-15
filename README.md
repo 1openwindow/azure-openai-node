@@ -62,4 +62,4 @@ To migrate from the official OpenAI model to the Azure OpenAI model, you can jus
 | createImage | Not Support |
 
 
-Please feel free to submit your issues or pull requests to support other APIs.
+Please feel free to submit your [issues](https://github.com/1openwindow/azure-openai-node/issues) or pull requests to support other APIs.
