@@ -1,0 +1,32 @@
+{
+  "name": "azure-openai",
+  "version": "0.0.11",
+  "description": "Node.js library for the Azure OpenAI API",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:1openwindow/openai-node-for-azure"
+  },
+  "keywords": [
+    "azure-openai",
+    "openai",
+    "open",
+    "ai",
+    "gpt-3",
+    "gpt3"
+  ],
+  "author": "Zihong",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc --outDir dist/"
+  },
+  "dependencies": {
+    "axios": "^0.26.0",
+    "form-data": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^12.11.5",
+    "typescript": "^3.6.4"
+  }
+}
