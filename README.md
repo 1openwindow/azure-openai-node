@@ -38,7 +38,7 @@ To migrate from the official OpenAI model to the Azure OpenAI model, you can jus
          azure: {
             apiKey: {your-azure-openai-resource-key},
             endpoint: {your-azure-openai-resource-endpoint},
-            deploymendName: {your-azure-openai-resource-deployment-name},
+            deploymentName: {your-azure-openai-resource-deployment-name},
          }
       }),
    );
