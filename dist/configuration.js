@@ -37,8 +37,8 @@ class Configuration {
             this.formDataCtor = require("form-data");
         }
         if (this.azure) {
-            if (!this.azure.apiKey || !this.azure.endpoint || !this.azure.deploymentName) {
-                throw new Error("Azure Configuration requires apiKey, endpoint and deploymentName");
+            if (!this.azure.apiKey || !this.azure.endpoint) {
+                throw new Error("Azure Configuration requires apiKey, endpoint");
             }
             this.apiKey = this.azure.apiKey;
             this.baseOptions.headers['api-key'] = this.azure.apiKey;

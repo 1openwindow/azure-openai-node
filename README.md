@@ -38,6 +38,7 @@ To migrate from the official OpenAI model to the Azure OpenAI model, you can jus
          azure: {
             apiKey: {your-azure-openai-resource-key},
             endpoint: {your-azure-openai-resource-endpoint},
+            // deploymentName is optional, if you donot set it, you need to set it in the request parameter
             deploymentName: {your-azure-openai-resource-deployment-name},
          }
       }),
@@ -51,6 +52,20 @@ To migrate from the official OpenAI model to the Azure OpenAI model, you can jus
     // Azure OpenAI donot response delta data, so you need to change the response to text
     // const delta = parsed.choices[0].delta.content;
     const delta = parsed.choices[0].text;
+    ```
+
+6. optional, you can also set your Azure deploymentName by replacing your model with deployment name, like this:
+    ```
+    const response = await this.openAiApi.createCompletion({
+      model: {your-azure-openai-resource-deployment-name},
+      prompt: prompt,
+      maxTokens: 100,
+      temperature: 0.9,
+      topP: 1,
+      presencePenalty: 0,
+      frequencyPenalty: 0,
+      bestOf: 1,
+    });
     ```
 
 ## Support
