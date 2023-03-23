@@ -197,7 +197,6 @@ exports.OpenAIApiAxiosParamCreator = function (configuration) {
                 let deploymentName = configuration.azure.deploymentName ? configuration.azure.deploymentName : createCompletionRequest.model;
                 localVarPath = `/openai/deployments/${deploymentName}/completions?api-version=2022-12-01`;
             }
-            console.log(`localVarPath: ${localVarPath}`);
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;

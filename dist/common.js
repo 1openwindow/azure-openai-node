@@ -159,7 +159,6 @@ exports.createPrompt = function (systemMessage, messages) {
         prompt += `\n<|im_start|>${message.sender}\n${message.text}\n<|im_end|>`;
     }
     prompt += "\n<|im_start|>assistant\n";
-    console.log(`prompt: ${prompt}`);
     return prompt;
 };
 exports.messageToAzurePrompt = function (messages) {
