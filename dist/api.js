@@ -127,10 +127,10 @@ exports.OpenAIApiAxiosParamCreator = function (configuration) {
             let localVarPath = `/chat/completions`;
             if (configuration.azure) {
                 let deploymentName = configuration.azure.deploymentName ? configuration.azure.deploymentName : createChatCompletionRequest.model;
-                localVarPath = `/openai/deployments/${deploymentName}/completions?api-version=2022-12-01`;
-                createChatCompletionRequest.prompt = createChatCompletionRequest.prompt ? createChatCompletionRequest.prompt : common_1.messageToAzurePrompt(createChatCompletionRequest.messages);
-                createChatCompletionRequest.messages = undefined;
-                createChatCompletionRequest.stop = createChatCompletionRequest.stop ? createChatCompletionRequest.stop : ["<|im_end|>"];
+                localVarPath = `/openai/deployments/${deploymentName}/chat/completions?api-version=2023-03-15-preview`;
+                //createChatCompletionRequest.prompt = createChatCompletionRequest.prompt ? createChatCompletionRequest.prompt : messageToAzurePrompt(createChatCompletionRequest.messages);
+                //createChatCompletionRequest.messages = undefined;
+                //createChatCompletionRequest.stop = createChatCompletionRequest.stop ? createChatCompletionRequest.stop : ["<|im_end|>"];
             }
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
