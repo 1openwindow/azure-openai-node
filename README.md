@@ -72,12 +72,13 @@ To migrate from the official OpenAI model to the Azure OpenAI model, you can jus
 support latest version of OpenAI API, v3.2.0.
 
 ## Test
-| API | Test Status |
-| --- | --- |
+| API | Test Status | 
+| --- | --- | 
 | createChatCompletion | Pass |
 | createCompletion | Pass |
 | createEmbedding | Pass |
 | createImage | Not Support |
 
+Check [Azure OpenAI Rest Spec](https://github.com/Azure/azure-rest-api-specs/blob/main/specification/cognitiveservices/data-plane/AzureOpenAI/inference/preview/2023-03-15-preview/inference.json)
 
 Please feel free to submit your [issues](https://github.com/1openwindow/azure-openai-node/issues) or pull requests to support other APIs.
