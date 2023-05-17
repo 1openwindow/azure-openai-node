@@ -59,12 +59,10 @@ To migrate from the official OpenAI model to the Azure OpenAI model, you can jus
     const response = await this.openAiApi.createCompletion({
       model: {your-azure-openai-resource-deployment-name},
       prompt: prompt,
-      maxTokens: 100,
-      temperature: 0.9,
-      topP: 1,
-      presencePenalty: 0,
-      frequencyPenalty: 0,
-      bestOf: 1,
+      max_tokens: 100,
+      top_p: 1,
+      frequency_penalty: 0,
+      presence_penalty: 0
     });
     ```
 
