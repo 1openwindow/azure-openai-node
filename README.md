@@ -40,6 +40,8 @@ To migrate from the official OpenAI model to the Azure OpenAI model, you can jus
             endpoint: {your-azure-openai-resource-endpoint},
             // deploymentName is optional, if you donot set it, you need to set it in the request parameter
             deploymentName: {your-azure-openai-resource-deployment-name},
+            // deploymentName is optional, if you donot set it, `2023-03-15-preview` will be applied
+            apiVersion: {your-azure-openai-resource-api-version},
          }
       }),
    );
